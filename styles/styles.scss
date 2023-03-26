@@ -1,0 +1,1590 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+@media (min-width: 357px){
+    .image .desktop{
+        display:none;
+    }
+    body{
+        height:100vh;
+    }
+    form{
+        height:100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        background-color: var(--light-blue);
+        height:50rem;
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    main .image{
+        height:30%;
+        position: relative;
+        .step_selectors{
+            position:absolute;
+            top:3em;
+            left:2.5em;
+            .select.active{
+                color:black;
+                background-color: var(--pastel-blue);
+            }
+            ul{
+                display: flex;
+                gap:2rem;
+                .step-description{
+                    display: none;;
+                }
+            }
+            li{
+                list-style: none;
+                font-size:1.7rem;
+                border:1px solid white;
+                border-radius:50%;
+                padding:.5rem;
+                width:3.7rem;
+                text-align: center;
+                color:white;
+            }
+        }  
+    }
+    main .image .mobile{
+        max-height:100%;
+        max-width: 370px;
+    }
+    main .hero{
+        width: 100%;
+        min-height:100%;
+        position:relative;
+        background-color: var(--light-blue);
+        .step-container{
+            width:90%;
+            background-color: white;
+            height:auto;
+            position: absolute;
+            top:-3.7em;
+            left:1.3em;
+            border-radius: 1.2rem;
+            box-shadow: 0px 0px 0px 0px rgba(97, 97, 97, 0.467);
+            .step1{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: none;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1em;
+                    fieldset{
+                        border:none;
+                        .label-error{
+                            display: flex;
+                            justify-content: space-between;
+    
+                            label{
+                                color: var(--marine-blue);
+                                font-size:1.3rem;
+                            }
+                            .error{
+                                color:red;
+                            }
+                        }
+                        input{
+                            width:100%;
+                            height:5em;
+                            border:1px solid var(--light-gray);
+                            border-radius: .2rem;
+                            
+                        }
+                        ::placeholder{
+                            padding-left:.6rem;
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: column;
+                    align-items: end;
+                    position: absolute;
+                    bottom:-6rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                }
+            }
+            .step1.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1em;
+                    fieldset{
+                        border:none;
+                        .label-error{
+                            display: flex;
+                            justify-content: space-between;
+    
+                            label{
+                                color: var(--marine-blue);
+                                font-size:1.3rem;
+                            }
+                        }
+                        input{
+                            width:100%;
+                            height:5em;
+                            border:1px solid var(--light-gray);
+                            border-radius: .2rem;
+                            
+                        }
+                        ::placeholder{
+                            padding-left:.6rem;
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: column;
+                    align-items: end;
+                    position: absolute;
+                    bottom:-13rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                }
+            }
+            .step2{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: none;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display:flex;
+                    flex-direction: column;
+                    gap:1em;
+                    fieldset{
+                        display: flex;
+                        border:none;
+                        gap:1em;
+                        padding:1em;
+                        border-radius: 0.5rem;
+                        position: relative;
+                        .plan-details{
+                            input[type=radio]::before{
+                                content:"";
+                                position:absolute;
+                                background-color: transparent;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 0.3;
+                                border:2px solid black;
+                            }
+                            input[type=radio]:checked::after{
+                                content:"";
+                                position:absolute;
+                                background-color: #f9fafd00;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 1;
+                                border:2px solid var(--light-blue);
+                            }
+                        }
+    
+                        .plan-duration{
+                            color:var(--cool-gray);
+                        }
+                    }
+                    
+                    
+                }
+                .periodity{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width:100%;
+                    gap:0.5em;
+                    border:none;
+                    background-color: var(--light-gray);
+                    border-radius: 0.8rem;
+                    .toggle-switch{
+                        height:60px;
+                    }
+                    input[type=checkbox]{
+                        height: 0;
+                        width: 0;
+                        visibility: hidden;
+                    }
+                      
+                    label {
+                        cursor: pointer;
+                        text-indent: -9999px;
+                        width: 50px;
+                        height: 20px;
+                        background: grey;
+                        display: block;
+                        border-radius: 100px;
+                        position: relative;
+                    }
+                      
+                    label:after {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        width: 10px;
+                        height: 10px;
+                        background: #fff;
+                        border-radius: 90px;
+                        transition: 0.3s;
+                    }
+                      
+                    input:checked + label {
+                        background: #bada55;
+                    }
+                      
+                    input:checked + label:after {
+                        left: calc(100% - 5px);
+                        transform: translateX(-100%);
+                    }
+                      
+                    label:active:after {
+                        width: 10px;
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-13rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }    
+            }
+            .step2.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display:flex;
+                    flex-direction: column;
+                    gap:1em;
+                    fieldset{
+                        display: flex;
+                        border:none;
+                        gap:1em;
+                        padding:1em;
+                        border-radius: 0.5rem;
+                        position: relative;
+                        .plan-details{
+                            input[type=radio]::before{
+                                content:"";
+                                position:absolute;
+                                background-color: transparent;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 0.3;
+                                border:2px solid black;
+                            }
+                            input[type=radio]:checked::after{
+                                content:"";
+                                position:absolute;
+                                background-color: #f9fafd00;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 1;
+                                border:2px solid var(--light-blue);
+                            }
+                        }
+    
+                        .plan-duration{
+                            color:var(--cool-gray);
+                        }
+                    }
+                    
+                    
+                }
+                .periodity{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width:100%;
+                    gap:0.5em;
+                    border:none;
+                    background-color: var(--light-gray);
+                    border-radius: 0.8rem;
+                    .toggle-switch{
+                        height:60px;
+                    }
+                    input[type=checkbox]{
+                        height: 0;
+                        width: 0;
+                        visibility: hidden;
+                    }
+                      
+                    label {
+                        cursor: pointer;
+                        text-indent: -9999px;
+                        width: 50px;
+                        height: 20px;
+                        background: grey;
+                        display: block;
+                        border-radius: 100px;
+                        position: relative;
+                    }
+                      
+                    label:after {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        width: 10px;
+                        height: 10px;
+                        background: #fff;
+                        border-radius: 90px;
+                        transition: 0.3s;
+                    }
+                      
+                    input:checked + label {
+                        background: #bada55;
+                    }
+                      
+                    input:checked + label:after {
+                        left: calc(100% - 5px);
+                        transform: translateX(-100%);
+                    }
+                      
+                    label:active:after {
+                        width: 10px;
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-13rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }    
+            }
+            .step3{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: none;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1.2em;
+                    fieldset{
+                        display: flex;
+                        align-items: center;
+                        gap:0.1em;
+                        position: relative;
+                        padding:0.8em 0.3em;
+                        border-radius: 0.5em;
+                        position: relative;
+                        border:none;
+                        input[type=checkbox]::before{
+                            content:"";
+                            position: absolute;
+                            background-color: transparent;
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            border-radius:0.5em;
+                            border:1px solid black;
+                        }
+                        input[type=checkbox]:checked::after{
+                            content:"";
+                            position: absolute;
+                            background-color: rgba(245, 245, 245, 0.336);
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            opacity: 1;
+                            border-radius:0.5em;
+                            border:1px solid var(--pastel-blue);
+                        }
+    
+                        .service-details{
+                            .service-name{
+                                color:var(--marine-blue);
+                                font-weight: 700;
+                                font-size:1.3rem;
+                            }
+                            .service-description{
+                                color:var(--cool-gray);
+                            }
+                        }
+                        .servicePrice{
+                            position: absolute;
+                            right:1em;
+                            color:var(--purplish-blue);
+                        }
+                    }
+                }
+    
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-18rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .step3.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1.2em;
+                    fieldset{
+                        display: flex;
+                        align-items: center;
+                        gap:0.1em;
+                        position: relative;
+                        padding:0.8em 0.3em;
+                        border-radius: 0.5em;
+                        position: relative;
+                        border:none;
+                        input[type=checkbox]::before{
+                            content:"";
+                            position: absolute;
+                            background-color: transparent;
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            border-radius:0.5em;
+                            border:1px solid black;
+                        }
+                        input[type=checkbox]:checked::after{
+                            content:"";
+                            position: absolute;
+                            background-color: rgba(245, 245, 245, 0.336);
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            opacity: 1;
+                            border-radius:0.5em;
+                            border:1px solid var(--pastel-blue);
+                        }
+    
+                        .service-details{
+                            .service-name{
+                                color:var(--marine-blue);
+                                font-weight: 700;
+                                font-size:1.3rem;
+                            }
+                            .service-description{
+                                color:var(--cool-gray);
+                            }
+                        }
+                        .servicePrice{
+                            position: absolute;
+                            right:1em;
+                            color:var(--purplish-blue);
+                        }
+                    }
+                }
+    
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-18rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .step4{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: none;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    .checkout{
+                        display:flex;
+                        flex-direction: column;
+                        .selectedPlan{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color:var(--marine-blue);
+                            font-weight:700;
+                            font-size:1.2rem;
+                            .selectedPlanName{
+                                display: flex;
+                                gap: 0.5em;
+                            }
+                        }
+                        hr{
+                            margin-top:0.5em;
+                        }
+                        .selectedServices{
+                            display: flex;
+                            flex-direction: column;
+                            gap:0.5em;
+                            margin-top:0.5em;
+                            .selectedservice1,.selectedservice2, .selectedservice3{
+                                display: flex;
+                                justify-content: space-between;
+                                .selectedServiceName1,.selectedServiceName2,.selectedServiceName3{
+                                    color:var(--cool-gray);
+                                }
+                                .selectedServicePrice1, .selectedServicePrice2, .selectedServicePrice3{
+                                    color:var(--marine-blue);
+                                    font-weight:500;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .total{
+                        margin-top:2.5em;
+                        display:flex;
+                        justify-content: space-between;
+                        .selectedTotalName{
+                            color:var(--cool-gray);    
+                        }
+                        .selectedTotalPrice{
+                            color:var(--marine-blue);
+                            font-weight:700;    
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-23rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .step4.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    .checkout{
+                        display:flex;
+                        flex-direction: column;
+                        .selectedPlan{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color:var(--marine-blue);
+                            font-weight:700;
+                            font-size:1.2rem;
+                            .selectedPlanName{
+                                display: flex;
+                                gap: 0.5em;
+                            }
+                        }
+                        hr{
+                            margin-top:0.5em;
+                        }
+                        .selectedServices{
+                            display: flex;
+                            flex-direction: column;
+                            gap:0.5em;
+                            margin-top:0.5em;
+                            .selectedservice1,.selectedservice2, .selectedservice3{
+                                display: flex;
+                                justify-content: space-between;
+                                .selectedServiceName1,.selectedServiceName2,.selectedServiceName3{
+                                    color:var(--cool-gray);
+                                }
+                                .selectedServicePrice1, .selectedServicePrice2, .selectedServicePrice3{
+                                    color:var(--marine-blue);
+                                    font-weight:500;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .total{
+                        margin-top:2.5em;
+                        display:flex;
+                        justify-content: space-between;
+                        .selectedTotalName{
+                            color:var(--cool-gray);    
+                        }
+                        .selectedTotalPrice{
+                            color:var(--marine-blue);
+                            font-weight:700;    
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-23rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .finish{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: none;
+                img{
+                    width:5em;
+                }
+                .heading{
+                    font-size:2.7rem;
+                    color:var(--marine-blue);
+                    font-weight:700;
+                }
+                .paragraph{
+                    font-size:1.5rem;
+                    line-height: 2rem;
+                    color:var(--cool-gray);
+                }
+            }
+            .finish.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                img{
+                    width:5em;
+                }
+                .heading{
+                    font-size:2.7rem;
+                    color:var(--marine-blue);
+                    font-weight:700;
+                }
+                .paragraph{
+                    font-size:1.5rem;
+                    line-height: 2rem;
+                    color:var(--cool-gray);
+                }
+            }
+    
+        }
+
+    
+    }
+    .active{
+        display:block;
+    }
+    
+}
+@media (min-width: 768px){
+    main{
+        background-color: var(--light-blue);
+        height:50rem;
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    main .image{
+        height:30%;
+        width:30rem;
+        position: relative;
+        .step_selectors{
+            position:absolute;
+            top:3em;
+            left:4.5em;
+            ul{
+                display: flex;
+                gap:2rem;
+            }
+            li{
+                list-style: none;
+                font-size:1.7rem;
+                border:1px solid white;
+                border-radius:50%;
+                padding:.5rem;
+                width:3.7rem;
+                text-align: center;
+                color:white;
+            }
+        }  
+    }
+    main .image .mobile{
+        height:100%;
+        min-width: 100%;
+    }
+    .step2.active{
+        display: block;
+    }
+    .step3.active{
+        display: block;
+    }
+    .step4.active{
+        display: block;
+    }
+    .finish.active{
+        display: block;
+    }
+}
+@media (min-width: 1030px){
+    form{
+        background-color: var(--magnolia);
+    }
+    main{
+        background-color: var(--light-blue);
+        height:38rem;
+        min-width: 60rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:0.5em;
+        background-color: white;
+        border-radius: 0.5em;;
+    }
+    main .image{
+        height:100%;
+        width:18rem;
+        position: relative;
+        .step_selectors{
+            position:absolute;
+            top:3em;
+            left:2.8em;
+            ul{
+                display: flex;
+                gap:2.4rem;
+                flex-direction: column;
+                .first-step{
+                    display:flex;
+                    align-items: center;
+                    gap:1em;
+                    .select.active{
+                        color:black;
+                        background-color: var(--pastel-blue);
+                    }
+                    .step-description{
+                        display:block;
+                        .step-number{
+                            color:var(--light-gray);
+                            font-size:1rem;
+                        }
+                        .step-info{
+                            color:white;
+                            font-weight:700;
+                            font-size:1.3rem;
+                        }
+                    }
+                }
+
+            }
+            li{
+                list-style: none;
+                font-size:1.7rem;
+                border:1px solid white;
+                border-radius:50%;
+                padding:.5rem;
+                width:3.7rem;
+                text-align: center;
+                color:white;
+            }
+        }  
+    }
+    main .image .mobile{
+        display:none;
+    }
+    main .image .desktop{
+        display: block;
+    }
+    main .hero{
+        width:80rem;
+        height:20rem;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .step-container{
+            width:90%;
+            background-color: white;
+            height:95%;
+            position:static ;
+            .step1.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: block;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:3.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1em;
+                    fieldset{
+                        border:none;
+                        .label-error{
+                            display: flex;
+                            justify-content: space-between;
+    
+                            label{
+                                color: var(--marine-blue);
+                                font-size:1.3rem;
+                            }
+                        }
+                        input{
+                            width:100%;
+                            height:5em;
+                            border:2px solid var(--light-gray);
+                            border-radius: .2rem;
+                        }
+                        ::placeholder{
+                            padding-left:.6rem;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: column;
+                    align-items: end;
+                    position: absolute;
+                    bottom:-4rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            .step2.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display:flex;
+                    flex-direction: row;
+                    gap:2em;
+                    fieldset{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        border:none;
+                        width:9em;
+                        gap:3em;
+                        padding:1em;
+                        border-radius: 0.5rem;
+                        position: relative;
+                        min-height:14em;
+                        img{
+                            width:3.5em;
+                            height:3.5em;
+                        }
+                        .plan-details{
+                            font-size: 1.5rem;;
+                            input[type=radio]::before{
+                                content:"";
+                                position:absolute;
+                                background-color: transparent;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 0.3;
+                                border:2px solid black;
+                            }
+                            input[type=radio]:checked::after{
+                                content:"";
+                                position:absolute;
+                                background-color: #f9fafd00;
+                                border-radius: 0.5rem;
+                                top:0em;
+                                bottom:0em;
+                                left: 0;
+                                right:0;
+                                opacity: 1;
+                                border:2px solid var(--light-blue);
+                            }
+                        }
+    
+                        .plan-duration{
+                            color:var(--cool-gray);
+                        }
+                        .free-month{
+                            color:var(--marine-blue);
+                            font-size:1.2rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .periodity{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        width:100%;
+                        gap:0.5em;
+                        border:none;
+                        background-color: var(--light-gray);
+                        border-radius: 0.8rem;
+                        .toggle-switch{
+                            height:60px;
+                        }
+                        input[type=checkbox]{
+                            height: 0;
+                            width: 0;
+                            visibility: hidden;
+                        }
+                          
+                        label {
+                            cursor: pointer;
+                            text-indent: -9999px;
+                            width: 50px;
+                            height: 20px;
+                            background: grey;
+                            display: block;
+                            border-radius: 100px;
+                            position: relative;
+                        }
+                          
+                        label:after {
+                            content: '';
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            width: 10px;
+                            height: 10px;
+                            background: #fff;
+                            border-radius: 90px;
+                            transition: 0.3s;
+                        }
+                          
+                        input:checked + label {
+                            background: #bada55;
+                        }
+                          
+                        input:checked + label:after {
+                            left: calc(100% - 5px);
+                            transform: translateX(-100%);
+                        }
+                          
+                        label:active:after {
+                            width: 10px;
+                        }
+                    }
+                    
+                }
+            }
+
+            .step3.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                display: block;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    .heading{
+                        font-size:2.7rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:1.5rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    display: flex;
+                    flex-direction: column;
+                    gap:2.5em;
+                    margin-top: 2em;
+                    fieldset{
+                        display: flex;
+                        align-items: center;
+                        gap:0.1em;
+                        position: relative;
+                        padding:1em 1em;
+                        border-radius: 0.5em;
+                        position: relative;
+                        border:none;
+                        input[type=checkbox]::before{
+                            content:"";
+                            position: absolute;
+                            background-color: transparent;
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            border-radius:0.5em;
+                            border:1px solid black;
+                        }
+                        input[type=checkbox]:checked::after{
+                            content:"";
+                            position: absolute;
+                            background-color: rgba(245, 245, 245, 0.336);
+                            left:0;
+                            right:0;
+                            top:0;
+                            bottom:0;
+                            opacity: 1;
+                            border-radius:0.5em;
+                            border:1px solid var(--pastel-blue);
+                        }
+    
+                        .service-details{
+                            .service-name{
+                                color:var(--marine-blue);
+                                font-weight: 700;
+                                font-size:1.3rem;
+                            }
+                            .service-description{
+                                color:var(--cool-gray);
+                            }
+                        }
+                        .servicePrice{
+                            position: absolute;
+                            right:1em;
+                            color:var(--purplish-blue);
+                        }
+                    }
+                }
+    
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-18rem;
+                    right:0.5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .step4.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1.6em;
+                position:relative;
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1em;
+                    .heading{
+                        font-size:5rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:2rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .step-hero{
+                    .checkout{
+                        display:flex;
+                        flex-direction: column;
+                        .selectedPlan{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color:var(--marine-blue);
+                            font-weight:700;
+                            font-size:2rem;
+                            .selectedPlanName{
+                                display: flex;
+                                gap: 0.5em;
+                                
+                            }
+                        }
+                        hr{
+                            margin-top:0.5em;
+                        }
+                        .selectedServices{
+                            display: flex;
+                            flex-direction: column;
+                            gap:0.5em;
+                            margin-top:0.5em;
+                            .selectedservice1,.selectedservice2, .selectedservice3{
+                                display: flex;
+                                justify-content: space-between;
+                                .selectedServiceName1,.selectedServiceName2,.selectedServiceName3{
+                                    color:var(--cool-gray);
+                                    font-size: 1.7rem;
+                                }
+                                .selectedServicePrice1, .selectedServicePrice2, .selectedServicePrice3{
+                                    color:var(--marine-blue);
+                                    font-weight:500;
+                                    font-size: 1.7rem;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .total{
+                        margin-top:2.5em;
+                        display:flex;
+                        justify-content: space-between;
+                        .selectedTotalName{
+                            color:var(--cool-gray);
+                            font-size: 1.7rem;    
+                        }
+                        .selectedTotalPrice{
+                            color:var(--marine-blue);
+                            font-weight:700;
+                            font-size: 1.7rem;    
+                        }
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    bottom:-5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .finish.active{
+                padding:1.3rem;
+                display:flex;
+                flex-direction: column;
+                gap:1em;
+                position:relative;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                img{
+                    width:5em;
+                }
+                .heading{
+                    font-size:2.7rem;
+                    color:var(--marine-blue);
+                    font-weight:700;
+                }
+                .paragraph{
+                    font-size:1.5rem;
+                    line-height: 2rem;
+                    color:var(--cool-gray);
+                }
+            }
+            .step2,.step3{
+
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1em;
+                    .heading{
+                        font-size:5rem;
+                        color:var(--marine-blue);
+                    }
+                    .paragraph{
+                        font-size:2rem;
+                        line-height: 2rem;
+                        color:var(--cool-gray);
+                    }
+                }
+                .controls{
+                    display: flex;
+                    width:100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    bottom:-5rem;
+                    .next{
+                        width:5em;
+                        border-radius: .5rem;
+                        background-color: var(--marine-blue);
+                        font-size:1.7rem;
+                        padding:1rem 0.8rem;
+                        color:var(--white);
+                        cursor: pointer;
+                    }
+                    .back{
+                        width:5em;
+                        border-radius: .5rem;
+                        color: var(--marine-blue);
+                        font-size:1.7rem;
+                        cursor: pointer; 
+                    }
+                }
+            }
+            .step1,.step2,.step3,.step4, .finish{
+                display: none;
+            }
+        }
+    }
+    
+}

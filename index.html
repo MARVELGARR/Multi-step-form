@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>multi dtep form</title>
+</head>
+<body>
+    <form action="">
+        <main>
+            <div class="image">
+                <img class="desktop" src="./images/bg-sidebar-desktop.svg" alt="">
+                <img class="mobile" src="./images/bg-sidebar-mobile.svg" alt="">
+                <div class="step_selectors">
+                    <ul>
+                        <div class="first-step">
+                            <li class="select active">1</li>
+                            <div class="step-description">
+                                <div class="step-number">STEP1</div>
+                                <div class="step-info">YOUR INFO</div>
+                            </div>
+                        </div>
+                        <div class="first-step">
+                            <li class="select">2</li>
+                            <div class="step-description">
+                                <div class="step-number">STEP2</div>
+                                <div class="step-info">SELECT PLAN</div>
+                            </div>
+                        </div>
+                        <div class="first-step">
+                            <li class="select">3</li>
+                            <div class="step-description">
+                                <div class="step-number">STEP3</div>
+                                <div class="step-info">ADD-ONS</div>
+                            </div>
+                        </div>
+                        <div class="first-step">
+                            <li class="select">4</li>
+                            <div class="step-description">
+                                <div class="step-number">STEP4</div>
+                                <div class="step-info">SUMMARY</div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="step-container">
+                    
+                    <div class=" step1 step active">
+                        <header>
+                            <div class="heading">
+                                Personal info
+                            </div>
+                            <div class="paragraph">
+                                Please provide your name, email<br>
+                                address, and phone number.
+                            </div>
+                        </header>
+                        <div class="step-hero">
+                            <fieldset>
+                                <div class="label-error">
+                                    <label for="name">Name</label>
+                                    <div class="error" id="name-error"></div>
+                                </div>
+                                <input type="text" id="name" placeholder="e.g. Stephen King" required>
+                            </fieldset>
+                            <fieldset>
+                                <div class="label-error">
+                                    <label for="email">Email Address</label>
+                                    <div class="error" id="email-error"></div>
+                                </div>
+                                <input type="text" id="email" placeholder="e.g. stephenking@lorem.com" required>
+                            </fieldset>
+                            <fieldset>
+                                <div class="label-error">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="error" id="phone-error"></div>
+                                </div>
+                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required>
+                            </fieldset>
+                        </div>
+                        <div class="controls">
+                            <div class="next">Next step</div>
+                        </div>
+                    </div>
+                    <div class="step2 step">
+                        <header>
+                            <div class="heading">
+                                Select your plan
+                            </div>
+                            <div class="paragraph">
+                                You have the option of monthly or<br>
+                                yearly billing.
+                            </div>
+                        </header>
+                        <div class="step-hero">
+                            <fieldset for="arcade-radio">
+                                <img src="./images/icon-arcade.svg" alt="">
+                                <div class="plan-details">
+                                    <div class="plan-name">Arcade</div>
+                                    <div class="plan-duration" id="arcade-duration">$9/mo</div>
+                                    <div class="free-month"></div>
+                                    <input type="radio" value="Arcade" name="radio" id="arcade-radio" class="radios">
+                                </div>
+                            </fieldset>
+                            <fieldset for="advance-radio">
+                                <img src="./images/icon-advanced.svg" alt="">
+                                <div class="plan-details">
+                                    <div class="plan-name">Advance</div>
+                                    <div class="plan-duration" id="advance-duration">$12/mo</div>
+                                    <div class="free-month"></div>
+                                    <input type="radio" value="Advance" name="radio" id="advance-radio" class="radios">
+                                </div>
+                            </fieldset>
+                            <fieldset for="pro-radio">
+                                <img src="./images/icon-pro.svg" alt="">
+                                <div class="plan-details">
+                                    
+                                    <div class="plan-name">Pro</div>
+                                    <div class="plan-duration" id="pro-duration">$15/mo</div>
+                                    <div class="free-month"></div>
+                                    <input type="radio" value="Pro" name="radio" id="pro-radio" class="radios">
+                                </div>
+                            </fieldset>
+                            
+                        </div>
+                        <div class="periodity">
+                            <span class="monthly">Monthly</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="switch" />
+                                <label for="switch">Toggle</label>
+                            </div>
+                            <span class="yearly">Yearly</span>
+                        </div>
+                        <div class="controls">
+                            <div class="back">Go back</div>
+                            <div class="next">Next step</div>
+                        </div>
+                    </div>
+                    <div class="step3 step ">
+                        <header>
+                            <div class="heading">
+                                Pick add-ons
+                            </div>
+                            <div class="paragraph">
+                                Add-ons help enhance your gaming<br>
+                                experience.
+                            </div>
+                        </header>
+                        <div class="step-hero">
+                            <fieldset>
+                                <input type="checkbox" class="checkz" name="" id="" value="Online service">
+                                <div class="service-details">
+                                    <div class="service-name">Online service</div>
+                                    <div class="service-description">Access to multiplayer games</div>
+                                </div>
+                                <div class="servicePrice servicePrice1">+$1/mo</div>
+                            </fieldset>
+                            <fieldset>
+                                <input type="checkbox" class="checkz" name="" id="" value="Larger storage">
+                                <div class="service-details">
+                                    <div class="service-name">Larger storage</div>
+                                    <div class="service-description">Extra 1TB of cloud save</div>
+                                </div>
+                                <div class="servicePrice servicePrice2">+$2/mo</div>
+                            </fieldset>
+                            <fieldset>
+                                <input type="checkbox" class="checkz" name="" id="" value="Customizable profile">
+                                <div class="service-details">
+                                    <div class="service-name">Customizable profile</div>
+                                    <div class="service-description">Custom theme on your profile</div>
+                                </div>
+                                <div class="servicePrice servicePrice3">+$2/mo</div>
+                            </fieldset>
+                        </div>
+                        <div class="controls">
+                            <div class="back">Go back</div>
+                            <div class="next">Next step</div>
+                        </div>
+                    </div>
+                    <div class="step4 step">
+                        <header>
+                            <div class="heading">
+                                Finishing up
+                            </div>
+                            <div class="paragraph">
+                                Double-check everything looks OK<br>
+                                before confirming
+                            </div>
+                        </header>
+                        <div class="step-hero">
+                            <div class="checkout">
+                                <div class="selectedPlan">
+                                    <div class="selectedPlanName"><span class="name"></span><span class="selectedPlandurarion"></span></div>
+                                    <div class="selectedPlanPrice"></span></div>
+                                </div>
+                                <hr>
+                                <div class="selectedServices">
+                                    <div class="selectedservice1">
+                                        <div class="selectedServiceName1"></div>
+                                        <div class="selectedServicePrice1"></div>
+                                    </div>
+                                    <div class="selectedservice2">
+                                        <div class="selectedServiceName2"></div>
+                                        <div class="selectedServicePrice2"></div>
+                                    </div>
+                                    <div class="selectedservice3">
+                                        <div class="selectedServiceName3"></div>
+                                        <div class="selectedServicePrice3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total">
+                                <div class="selectedTotalName"><span class="name">Total</span><span class="totalSelectedPlanDurarion">(per Monthly)</span></div>
+                                <div class="selectedTotalPrice"><span class="plus">+</span><span class="dolla">$</span><span class="totalSelectedPrice"></span><span class="per">/</span><span class="totalPriceDuration">mon</span></div>
+                            </div>
+                        <div class="controls">
+                            <div class="back">Go back</div>
+                            <button class="next" type="submit">confirm</button>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="finish step">
+                    <img src="./images/icon-thank-you.svg" alt="">
+                    <div class="thank-you-message">
+                        <div class="heading">Thank you</div>
+                        <div class="paragraph">
+                            Thanks for confirming your subscription!<br>
+                            We hope you have fun using our<br>
+                            platform. if you ever need support,<br>
+                            please feel free to email us at<br>
+                            support@lorem.com.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </form>
+    <script src="./javascript/app.js"></script>
+</body>
+</html>
